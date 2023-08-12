@@ -26,11 +26,11 @@
 	font-weight: 600;
 }
 .nav-menu:hover {
-	color: #c81e1e !important;
+	color: #3498DB !important;
 }
 
 .active {
-	color: #c81e1e !important;
+	color: #3498DB !important;
 }
 /* .nav-menu:active{
 	color: #C81E1E !important;
