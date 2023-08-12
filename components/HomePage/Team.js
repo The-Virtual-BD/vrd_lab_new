@@ -40,7 +40,7 @@ const Team = () => {
 			<div className=" flex items-center justify-center">
 				<Link
 					href={"/researchers"}
-					className="bg-red-700 hover:bg-red-500 text-sm lg:text-xl text-white  py-2 px-5 lg:px-8 rounded  flex items-center gap-1 text-center"
+					className=" bg-primary hover:bg-secondary text-sm lg:text-xl text-white  py-2 px-5 lg:px-8 rounded  flex items-center gap-1 text-center"
 				>
 					<span>VIEW ALL</span> <BsArrowRight />
 				</Link>

@@ -78,7 +78,7 @@ const News = () => {
 									className=" w-full lg:w-80 h-full lg:h-[250px] overflow-hidden"
 								>
 									<h2
-										className="text-red-700 hover:text-red-500 text-xl lg:text-2xl font-semibold mb-3 cursor-pointer"
+										className="text-primary hover:text-secondary text-xl lg:text-2xl font-semibold mb-3 cursor-pointer"
 										onClick={() => handleNewsView(data?._id)}
 									>
 										{data.newsTitle.slice(0, 50)}
@@ -95,7 +95,7 @@ const News = () => {
 
 									<button
 										onClick={() => handleNewsView(data?._id)}
-										class="inline-flex items-center font-bold  py-2 gap-1  text-center text-red-700 hover:text-red-500 text-sm lg:text-base"
+										class="inline-flex items-center font-bold  py-2 gap-1  text-center text-primary hover:text-secondary text-sm lg:text-base"
 									>
 										Read more <BsArrowRight className="text-xl" />
 									</button>
@@ -104,7 +104,7 @@ const News = () => {
 							.slice(0, 3)}
 					</div>
 
-					<div className="w-full lg:w-1/4 bg-red-700 text-white p-5  flex flex-col justify-center rounded-sm h-[250px]">
+					<div className="w-full lg:w-1/4 bg-primary text-white p-5  flex flex-col justify-center rounded-sm h-[250px]">
 						<h2 className="text-xl lg:text-2xl font-bold">
 							Best Laboratory Award Winner Year 2015-2016
 						</h2>

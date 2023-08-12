@@ -12,7 +12,7 @@ const Home = () => {
 	return (
 		<>
 		<Head>
-			<title>Digital Cardiology Research Group </title>
+			<title>VRD Research Lab </title>
 		</Head>
 		<div>
 			

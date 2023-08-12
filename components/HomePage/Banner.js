@@ -8,7 +8,7 @@ const Banner = () => {
 			<div className="slider-bg flex items-center justify-center text-white ">
 				<div className="container mx-auto text-center px-5 lg:px-0">
 					<h1 className="text-2xl lg:text-6xl font-bold text-white mb-4 max-w-5xl mx-auto">
-						Welcome to the Digital Cardiology Research Group
+						Welcome to the VRD Research Lab
 					</h1>
 					<p className="text-white mb-8 max-w-4xl mx-auto text-sm lg:text-base">
 						Our group focuses on the intersection of wearable devices,
@@ -21,7 +21,7 @@ const Banner = () => {
 					<div className=" flex items-center justify-center">
 						<Link
 							href={"/projects"}
-							className="bg-red-700 hover:bg-red-500 text-sm lg:text-xl text-white font-semibold py-2 px-5 lg:px-8 rounded  flex items-center gap-1 text-center"
+							className="bg-primary hover:bg-secondary text-sm lg:text-xl text-white font-semibold py-2 px-5 lg:px-8 rounded  flex items-center gap-1 text-center"
 						>
 							<span>Let&apos;s Explore</span> <BsArrowRight />
 						</Link>

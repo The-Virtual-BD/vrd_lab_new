@@ -53,7 +53,7 @@ const RecentProjects = () => {
 
 							<div class="p-3  h-full">
 								<h5
-									class="mb-2 cursor-pointer text-lg lg:text-2xl font-bold tracking-tight text-darkBg hover:text-red-700 "
+									class="mb-2 cursor-pointer text-lg lg:text-2xl font-bold tracking-tight text-darkBg hover:text-primary "
 									onClick={() => handleProjectView(_id)}
 								>
 									{pub?.proName.slice(0, 60)}
@@ -65,7 +65,7 @@ const RecentProjects = () => {
 
 								<button
 									onClick={() => handleProjectView(pub?._id)}
-									class="flex items-center px-3 lg:px-5 text-sm lg:text-base py-2 gap-1  font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-500 absolute bottom-3"
+									class="flex items-center px-3 lg:px-5 text-sm lg:text-base py-2 gap-1  font-medium text-center text-white rounded-lg bg-primary hover:bg-secondary absolute bottom-3"
 								>
 									Read more <BsArrowRight className="text-xl" />
 								</button>
@@ -78,7 +78,7 @@ const RecentProjects = () => {
 			<div className=" flex items-center justify-center mt-10">
 				<Link
 					href={"/projects"}
-					className="bg-red-700 hover:bg-red-500 text-sm lg:text-xl text-white  py-2 px-5 lg:px-8 rounded  flex items-center gap-1 text-center"
+					className=" bg-primary hover:bg-secondary text-sm lg:text-xl text-white  py-2 px-5 lg:px-8 rounded  flex items-center gap-1 text-center"
 				>
 					<span>VIEW ALL</span> <BsArrowRight />
 				</Link>

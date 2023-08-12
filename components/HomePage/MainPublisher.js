@@ -9,7 +9,7 @@ const MainPublisher = () => {
 				<h3 className="text-lg lg:text-xl font-bold  pb-10 text-center">
 					Labora is the United States based medical laboratory, medicine, and
 					vaccine company with over{" "}
-					<span className="text-red-700">35 years of experience</span> focusing
+					<span className="text-primary">35 years of experience</span> focusing
 					on value medicine and a vaccine to provide quality needs.
 				</h3>
 
@@ -39,7 +39,7 @@ const MainPublisher = () => {
 
 						<Link
 							href="/publications"
-							class="inline-flex items-center text-base lg:text-xl font-bold py-2 gap-1 text-red-700 hover:text-red-500 "
+							class="inline-flex items-center text-base lg:text-xl font-bold py-2 gap-1 text-primary hover:text-secondary "
 						>
 							View Our Publications
 							<BsArrowRight className="text-xl" />
