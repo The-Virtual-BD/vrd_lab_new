@@ -39,7 +39,7 @@ const Articale = () => {
 	}
 
 	return (
-		<div className="bg-white text-darkBg py-10 px-5 lg:px-0 max-w-7xl mx-auto">
+		<div className="bg-white text-darkBg pt-5 lg:pt-10 pb-2 px-5 lg:px-0 max-w-7xl mx-auto">
 			<h2 className="text-start font-bold text-3xl mb-4">
 				{" "}
 				Conference Article
@@ -82,7 +82,7 @@ const JournalArticale = () => {
 		return null
 	}
 	return (
-		<div className="bg-white text-darkBg py-5 px-5 lg:px-0 max-w-7xl mx-auto">
+		<div className="bg-white text-darkBg pt-3 pb-5 px-5 lg:px-0 max-w-7xl mx-auto">
 			<h2 className="text-start font-bold text-3xl mb-4"> Journal Article</h2>
 
 			<div>

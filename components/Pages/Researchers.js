@@ -32,7 +32,7 @@ const ResearchTeam = () => {
 		);
 	}
 	if (!teamLoading && teams?.length === 0) {
-		return <p>No Member Available Avaiable</p>;
+		return <p>No Member  Avaiable</p>;
 	}
 
 	const leadershipMember = teams?.filter(
@@ -58,12 +58,12 @@ const ResearchTeam = () => {
 	// console.log(teams);
 
 	return (
-		<div className=" px-5  bg-white text-darkBg">
+		<div className=" px-5  bg-white text-darkBg pb-10 pt-5">
 			<div className="mb-10  max-w-7xl mx-auto ">
-				{leadershipMember && (
-					<div className="my-10">
+				{leadershipMember?.length!==0 &&(
+					<div className="my-5 lg:my-10">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							Leadership
+							 {leadershipMember? "Leadership":""}
 						</h2>
 						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
 							{leadershipMember?.map((team) => (
@@ -73,7 +73,7 @@ const ResearchTeam = () => {
 					</div>
 				)}
 
-				{teamMember && (
+				{teamMember?.length!==0 && (
 					<div className="mt-10 lg:mt-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
 							Team Members
@@ -86,7 +86,7 @@ const ResearchTeam = () => {
 					</div>
 				)}
 
-				{alumniMember && (
+				{alumniMember?.length!==0 && (
 					<div className="mt-10 lg:mt-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
 							Alumni
@@ -99,36 +99,12 @@ const ResearchTeam = () => {
 					</div>
 				)}
 
-				{/* {phdMember && (
-					<div className="mt-10 lg:mt-20">
-						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							PhD Students
-						</h2>
-						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
-							{phdMember?.map((team) => (
-								<MemberCard key={team.id} team={team} />
-							))}
-						</div>
-					</div>
-				)}
+				
 
-				{visitingMember && (
-					<div className="mt-10 lg:mt-20">
-						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							Visiting Scholars
-						</h2>
-						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
-							{visitingMember?.map((team) => (
-								<MemberCard key={team.id} team={team} />
-							))}
-						</div>
-					</div>
-				)} */}
-
-				{collabaratorsMember && (
+				{collabaratorsMember?.length!==0 && (
 					<div className="mt-10 lg:mt-20 mb-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							Collaborators
+							  {collabaratorsMember? "Collaborators":""}
 						</h2>
 						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
 							{collabaratorsMember?.map((team) => (

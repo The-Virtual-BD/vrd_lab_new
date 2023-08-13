@@ -42,7 +42,7 @@ const NewsPage = () => {
 	};
 
 	return (
-		<div className="max-w-7xl mx-auto px-5 lg:px-0 my-10">
+		<div className="max-w-7xl mx-auto px-5 lg:px-0 my-5 lg:my-10">
 			<div className=" flex flex-col gap-5">
 				{sortNews?.map((data) => (
 					<div key={data._id} className=" w-full">

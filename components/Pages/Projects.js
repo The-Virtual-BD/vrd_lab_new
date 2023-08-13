@@ -11,7 +11,7 @@ const Projects = () => {
 	return (
 		<div>
 			<PageBanner>Projects</PageBanner>
-			<div className="bg-white text-darkBg my-10">
+			<div className="bg-white text-darkBg my-5 lg:my-10">
 				<CurrentProjects />
 				<PastProject />
 			</div>
@@ -133,7 +133,7 @@ const ProjectCard = ({ pro }) => {
 					</h5>
 
 					<p class="mb-3 font-normal text-gray-700 text-sm lg:text-base">
-						{proShDesc.slice(0, 150)}
+						{proShDesc.slice(0, 130)}
 					</p>
 
 					<button

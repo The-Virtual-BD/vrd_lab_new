@@ -12,7 +12,7 @@ const FooterD = () => {
 					<div className="bg-creamBg">
 						<div className="flex flex-col lg:flex-row items-center gap-10 px-5 lg:px-0 py-5 max-w-7xl mx-auto">
 							<div className="w-full lg:w-2/6 ">
-								<div>
+								<div className="">
 									<img
 										src="/assets/logo.svg"
 										className=" w-full h-16"

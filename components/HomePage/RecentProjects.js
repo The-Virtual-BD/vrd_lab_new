@@ -60,7 +60,7 @@ const RecentProjects = () => {
 								</h5>
 
 								<p class="mb-3 font-normal text-gray-700 text-sm lg:text-base">
-									{pub?.proShDesc.slice(0, 150)}
+									{pub?.proShDesc.slice(0, 130)}
 								</p>
 
 								<button
