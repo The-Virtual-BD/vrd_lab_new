@@ -34,7 +34,7 @@ const NewsPage = () => {
 	}
 
 	if (!newsLoading && news?.length === 0) {
-		return <p>No News Avaiable</p>;
+		return <p className="text-center text-base lg:text-lg">No News Avaiable</p>;
 	}
 
 	const handleNewsView = (id) => {

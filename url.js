@@ -1,1 +1,1 @@
-export const baseUrl = `https://research.ishtiuq.com`
+export const baseUrl = `https://backend.vrdlab.com`;

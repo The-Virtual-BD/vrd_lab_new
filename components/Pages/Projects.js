@@ -13,6 +13,7 @@ const Projects = () => {
 			<PageBanner>Projects</PageBanner>
 			<div className="bg-white text-darkBg my-10">
 				<CurrentProjects />
+				<PastProject />
 			</div>
 		</div>
 	);
@@ -26,9 +27,9 @@ const CurrentProjects = () => {
 	if (projectsLoading) {
 		return (
 			<div className="grid grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
-			<CardScaleton />
-			<CardScaleton />
-			<CardScaleton />
+				<CardScaleton />
+				<CardScaleton />
+				<CardScaleton />
 			</div>
 		);
 	}
@@ -36,14 +37,9 @@ const CurrentProjects = () => {
 	const currentProject = projects?.filter(
 		(cPro) => cPro.proCategory === "current"
 	);
-	const pastProject = projects?.filter((cPro) => cPro.proCategory === "past");
 
 	if (!projectsLoading && currentProject?.length === 0) {
-		return <p>No Current Projects Avaiable</p>;
-	}
-
-	if (!projectsLoading && pastProject?.length === 0) {
-		return <p>No Past Projects Avaiable</p>;
+		return null;
 	}
 
 	//proCategory current past
@@ -51,33 +47,60 @@ const CurrentProjects = () => {
 
 	return (
 		<div className="max-w-7xl mx-auto px-5 lg:px-0">
-			{currentProject && (
-				<div className="">
-					<h2 className="text-start font-bold text-2xl lg:text-4xl mb-4">
-						{" "}
-						Current Projects
-					</h2>
-					<div className="grid grid-cols-1 lg:grid-cols-3 gap-5 place-items-center ">
-						{currentProject.map((pro) => (
-							<ProjectCard key={pro._id} pro={pro} />
-						))}
+			<div>
+				{currentProject && (
+					<div className="">
+						<h2 className="text-start font-bold text-2xl lg:text-4xl mb-4">
+							{" "}
+							Current Projects
+						</h2>
+						<div className="grid grid-cols-1 lg:grid-cols-3 gap-5 place-items-center ">
+							{currentProject.map((pro) => (
+								<ProjectCard key={pro._id} pro={pro} />
+							))}
+						</div>
 					</div>
-				</div>
-			)}
+				)}
+			</div>
+		</div>
+	);
+};
 
-			{pastProject && (
-				<div className="mt-10">
-					<h2 className="text-start font-bold text-2xl lg:text-4xl mb-4">
-						{" "}
-						Past Projects
-					</h2>
-					<div className="grid grid-cols-1 lg:grid-cols-3 gap-5 place-items-center ">
-						{pastProject.map((pro) => (
-							<ProjectCard key={pro._id} pro={pro} />
-						))}
+const PastProject = () => {
+	const { projects, projectsLoading } = useCollection();
+
+	if (projectsLoading) {
+		return (
+			<div className="grid grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
+				<CardScaleton />
+				<CardScaleton />
+				<CardScaleton />
+			</div>
+		);
+	}
+
+	const pastProject = projects?.filter((cPro) => cPro.proCategory === "past");
+	if (!projectsLoading && pastProject?.length === 0) {
+		return null;
+	}
+
+	return (
+		<div className="max-w-7xl mx-auto px-5 lg:px-0">
+			<div>
+				{pastProject && (
+					<div className="mt-10">
+						<h2 className="text-start font-bold text-2xl lg:text-4xl mb-4">
+							{" "}
+							Past Projects
+						</h2>
+						<div className="grid grid-cols-1 lg:grid-cols-3 gap-5 place-items-center ">
+							{pastProject.map((pro) => (
+								<ProjectCard key={pro._id} pro={pro} />
+							))}
+						</div>
 					</div>
-				</div>
-			)}
+				)}
+			</div>
 		</div>
 	);
 };
@@ -93,11 +116,13 @@ const ProjectCard = ({ pro }) => {
 	return (
 		<>
 			<div class="bg-fontclr  rounded-lg shadow-sm hover:shadow-lg w-full  h-full min-h-[440px] lg:min-h-[470px]  relative">
-				<img
-					className="rounded-t-lg h-[250px] w-full"
-					src={`${baseUrl}/${proImg}`}
-					alt={proName}
-				/>
+				<div className="h-[250px] w-full">
+					<img
+						className="rounded-t-lg w-full h-full"
+						src={`${baseUrl}/${proImg}`}
+						alt={proName}
+					/>
+				</div>
 
 				<div class="p-3   h-full">
 					<h5

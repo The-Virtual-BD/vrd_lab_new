@@ -20,24 +20,23 @@ export default Publications;
 
 const Articale = () => {
 	const { publications, publicationsLoading } = useCollection();
-	console.log(publications);
+	// console.log(publications);
 
 	const findConfArticale = publications?.filter(
 		(confArt) => confArt.publiCategory === "conference"
 	);
 
 	if (publicationsLoading) {
-		return  (
+		return (
 			<div className=" max-w-7xl mx-auto">
 				<NewsSkeleton />
 			</div>
 		);
-	};
+	}
 
 	if (!publicationsLoading && findConfArticale?.length === 0) {
-		return <p>No Conference Article Avaiable</p>;
-	};
-
+		return null
+	}
 
 	return (
 		<div className="bg-white text-darkBg py-10 px-5 lg:px-0 max-w-7xl mx-auto">
@@ -48,7 +47,9 @@ const Articale = () => {
 			<div>
 				{findConfArticale?.map((data) => (
 					<div key={data?._id} className="py-2 flex items-start gap-1">
-						<div><BsDot className="text-xl font-bold" /></div>
+						<div>
+							<BsDot className="text-xl font-bold" />
+						</div>
 						<div>
 							<div
 								className="text-labelclr"
@@ -71,16 +72,15 @@ const Articale = () => {
 
 const JournalArticale = () => {
 	const { publications, publicationsLoading } = useCollection();
-	console.log(publications);
+	// console.log(publications);
 
 	const findJourArticale = publications?.filter(
 		(confArt) => confArt.publiCategory === "journal"
 	);
 
-
 	if (!publicationsLoading && findJourArticale?.length === 0) {
-		return <p>No Journal Article Avaiable</p>;
-	};
+		return null
+	}
 	return (
 		<div className="bg-white text-darkBg py-5 px-5 lg:px-0 max-w-7xl mx-auto">
 			<h2 className="text-start font-bold text-3xl mb-4"> Journal Article</h2>
@@ -88,7 +88,9 @@ const JournalArticale = () => {
 			<div>
 				{findJourArticale?.map((data) => (
 					<div key={data?._id} className="py-2 flex items-start gap-3">
-						<div><BsDot className="text-xl font-bold" /></div>
+						<div>
+							<BsDot className="text-xl font-bold" />
+						</div>
 						<div>
 							<div
 								className="text-labelclr"

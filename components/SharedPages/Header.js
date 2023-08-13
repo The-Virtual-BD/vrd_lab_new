@@ -16,7 +16,7 @@ const Header = () => {
 				<Navbar.Brand href="/">
 					<img
 						src="/assets/logo.svg"
-						className="mr-3 w-full h-16"
+						className="mr-3 w-full h-10 lg:h-16"
 						alt=" Logo"
 					/>
 
