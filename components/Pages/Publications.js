@@ -57,7 +57,7 @@ const Articale = () => {
 
 							<Link
 								href={data?.publicationsLink}
-								class="inline-flex items-center font-bold  pb-2 gap-1  text-center text-red-700 hover:text-red-500 text-sm lg:text-base"
+								class="inline-flex items-center font-bold  pb-2 gap-1  text-center text-primary hover:underline text-sm lg:text-base"
 							>
 								Read more <BsArrowRight className="text-xl" />
 							</Link>
@@ -97,7 +97,7 @@ const JournalArticale = () => {
 
 							<Link
 								href={data?.publicationsLink}
-								class="inline-flex items-center font-bold  pb-2 gap-1  text-center text-red-700 hover:text-red-500 text-sm lg:text-base"
+								class="inline-flex items-center font-bold  pb-2 gap-1  text-center text-primary hover:underline text-sm lg:text-base"
 							>
 								Read more <BsArrowRight className="text-xl" />
 							</Link>

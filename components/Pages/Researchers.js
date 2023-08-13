@@ -45,12 +45,12 @@ const ResearchTeam = () => {
 		(alumni) => alumni.memberCategory === "Alumni"
 	);
 
-	const phdMember = teams?.filter(
+	/* const phdMember = teams?.filter(
 		(phd) => phd.memberCategory === "PhD Students"
 	);
 	const visitingMember = teams?.filter(
 		(visiting) => visiting.memberCategory === "Visiting Scholars"
-	);
+	); */
 	const collabaratorsMember = teams?.filter(
 		(collaborators) => collaborators.memberCategory === "Collaborators"
 	);
@@ -99,7 +99,7 @@ const ResearchTeam = () => {
 					</div>
 				)}
 
-				{phdMember && (
+				{/* {phdMember && (
 					<div className="mt-10 lg:mt-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
 							PhD Students
@@ -123,7 +123,7 @@ const ResearchTeam = () => {
 							))}
 						</div>
 					</div>
-				)}
+				)} */}
 
 				{collabaratorsMember && (
 					<div className="mt-10 lg:mt-20 mb-20">

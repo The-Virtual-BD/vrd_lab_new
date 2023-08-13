@@ -35,7 +35,7 @@ const Details = () => {
 	return (
 		<div className="bg-white text-darkBg">
 			<div className="max-w-7xl mx-auto px-5 lg:px-0 py-10">
-				<h1 className="text-xl lg:text-3xl font-bold text-red-700">
+				<h1 className="text-xl lg:text-3xl font-bold text-primary">
 					{sinWork?.newsTitle}
 				</h1>
 

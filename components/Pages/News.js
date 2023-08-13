@@ -47,7 +47,7 @@ const NewsPage = () => {
 				{sortNews?.map((data) => (
 					<div key={data._id} className=" w-full">
 						<h2
-							className="text-red-700 hover:text-red-500 text-xl lg:text-2xl font-semibold mb-1 cursor-pointer"
+							className="text-darkBg hover:text-primary text-xl lg:text-2xl font-semibold mb-1 cursor-pointer"
 							onClick={() => handleNewsView(data?._id)}
 						>
 							{data?.newsTitle}
@@ -60,7 +60,7 @@ const NewsPage = () => {
 
 						<button
 							onClick={() => handleNewsView(data?._id)}
-							class="inline-flex items-center font-bold  py-1 gap-1  text-center text-red-700 hover:text-red-500 text-sm lg:text-base"
+							class="inline-flex items-center font-bold  py-1 gap-1  text-center text-primary hover:underline text-sm lg:text-base"
 						>
 							Read more <BsArrowRight className="text-xl" />
 						</button>

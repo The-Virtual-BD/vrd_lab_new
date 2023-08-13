@@ -11,14 +11,18 @@ const FooterD = () => {
 				<div className="w-full ">
 					<div className="bg-creamBg">
 						<div className="flex flex-col lg:flex-row items-center gap-10 px-5 lg:px-0 py-5 max-w-7xl mx-auto">
-							<div className="w-full lg:w-2/6">
-								<h2 className="text-xl lg:text-3xl  font-bold text-red-700">
-									Digital Cardiology <br /> Research Group
-								</h2>
-								<p className=" text-sm lg:text-base  mt-4">
-									Labora is a creative & powerful medical and laboratory site
-									template that suits all your business needs.
-								</p>
+							<div className="w-full lg:w-2/6 ">
+								<div>
+									<img
+										src="/assets/logo.svg"
+										className=" w-full h-16"
+										alt=" Logo"
+									/>
+									<p className=" text-sm lg:text-base  mt-4">
+										Labora is a creative & powerful medical and laboratory site
+										template that suits all your business needs.
+									</p>
+								</div>
 							</div>
 
 							<div className="w-full lg:w-4/6 flex flex-col lg:flex-row items-start justify-between gap-5 ">
@@ -62,19 +66,19 @@ const FooterD = () => {
 										<Footer.Title title="Follow Us" />
 										<Footer.LinkGroup row className="gap-3">
 											<Footer.Link href="#">
-												<div className="h-9 w-9 bg-red-700 hover:bg-red-500 cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
+												<div className="h-9 w-9 bg-primary hover:bg-secondary cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
 													<BsFacebook />
 												</div>
 											</Footer.Link>
 
 											<Footer.Link href="#">
-												<div className="h-9 w-9 bg-red-700 hover:bg-red-500 cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
+												<div className="h-9 w-9 bg-primary hover:bg-secondary cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
 													<BsInstagram />
 												</div>
 											</Footer.Link>
 
 											<Footer.Link href="#">
-												<div className="h-9 w-9 bg-red-700 hover:bg-red-500 cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
+												<div className="h-9 w-9 bg-primary hover:bg-secondary cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
 													<BsTwitter />
 												</div>
 											</Footer.Link>
@@ -89,8 +93,8 @@ const FooterD = () => {
 
 					<div className=" bg-darkBg text-white py-2 text-sm">
 						<p className=" px-5 lg:px-0 text-center  max-w-7xl mx-auto">
-							&copy; {getYear} - Digital Cardiology Research Group Developed by{" "}
-							<span className="font-bold hover:text-red-500 hover:underline">
+							&copy; {getYear} - VRD Research Lab Developed by{" "}
+							<span className="font-bold hover:text-primary hover:underline">
 								<Link href={"https://thevirtualbd.com/"}>The Virtual BD</Link>
 							</span>
 						</p>

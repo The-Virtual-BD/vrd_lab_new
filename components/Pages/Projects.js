@@ -101,7 +101,7 @@ const ProjectCard = ({ pro }) => {
 
 				<div class="p-3   h-full">
 					<h5
-						class="mb-2 cursor-pointer text-lg lg:text-2xl font-bold tracking-tight text-darkBg hover:text-red-700 "
+						class="mb-2 cursor-pointer text-lg lg:text-2xl font-bold tracking-tight text-darkBg hover:text-primary "
 						onClick={() => handleProjectView(_id)}
 					>
 						{proName.slice(0, 60)}
@@ -113,7 +113,7 @@ const ProjectCard = ({ pro }) => {
 
 					<button
 						onClick={() => handleProjectView(_id)}
-						class="flex items-center px-3 lg:px-5 text-sm lg:text-base py-2 gap-1  font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-500 absolute bottom-3 "
+						class="flex items-center px-3 lg:px-5 text-sm lg:text-base py-2 gap-1  font-medium text-center text-white bg-primary rounded-lg hover:bg-secondary absolute bottom-3 "
 					>
 						Read more <BsArrowRight className="text-xl" />
 					</button>
