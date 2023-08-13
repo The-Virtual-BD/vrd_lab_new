@@ -32,7 +32,7 @@ const ResearchTeam = () => {
 		);
 	}
 	if (!teamLoading && teams?.length === 0) {
-		return <p>No Member  Avaiable</p>;
+		return <p>No Member Avaiable</p>;
 	}
 
 	const leadershipMember = teams?.filter(
@@ -60,10 +60,10 @@ const ResearchTeam = () => {
 	return (
 		<div className=" px-5  bg-white text-darkBg pb-10 pt-5">
 			<div className="mb-10  max-w-7xl mx-auto ">
-				{leadershipMember?.length!==0 &&(
+				{leadershipMember?.length !== 0 && (
 					<div className="my-5 lg:my-10">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							 {leadershipMember? "Leadership":""}
+							Leadership
 						</h2>
 						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
 							{leadershipMember?.map((team) => (
@@ -73,7 +73,7 @@ const ResearchTeam = () => {
 					</div>
 				)}
 
-				{teamMember?.length!==0 && (
+				{teamMember?.length !== 0 && (
 					<div className="mt-10 lg:mt-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
 							Team Members
@@ -86,7 +86,7 @@ const ResearchTeam = () => {
 					</div>
 				)}
 
-				{alumniMember?.length!==0 && (
+				{alumniMember?.length !== 0 && (
 					<div className="mt-10 lg:mt-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
 							Alumni
@@ -99,12 +99,10 @@ const ResearchTeam = () => {
 					</div>
 				)}
 
-				
-
-				{collabaratorsMember?.length!==0 && (
+				{collabaratorsMember?.length !== 0 && (
 					<div className="mt-10 lg:mt-20 mb-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							  {collabaratorsMember? "Collaborators":""}
+							{collabaratorsMember ? "Collaborators" : ""}
 						</h2>
 						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
 							{collabaratorsMember?.map((team) => (
@@ -121,10 +119,10 @@ const ResearchTeam = () => {
 const MemberCard = ({ team }) => {
 	const router = useRouter();
 	const { _id, memberName, memberImg, memberDesi } = team;
-	
+
 	return (
 		<div>
-			<div className="team_card " >
+			<div className="team_card ">
 				<div className="team_img">
 					<img src={`${baseUrl}/${memberImg}`} alt={memberName} />
 				</div>
