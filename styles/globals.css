@@ -26,11 +26,11 @@
 	font-weight: 600;
 }
 .nav-menu:hover {
-	color: #3498DB !important;
+	color: #3498db !important;
 }
 
 .active {
-	color: #3498DB !important;
+	color: #3498db !important;
 }
 /* .nav-menu:active{
 	color: #C81E1E !important;
@@ -85,3 +85,12 @@
 		padding: 100px 10px 30px 10px;
 	}
 }
+
+@media screen and (min-width: 800px) and (max-width: 1020px) {
+	.navbar-menu>div {
+		flex-wrap: nowrap !important;
+		justify-content: space-between !important;
+	}
+  }
+
+
