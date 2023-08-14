@@ -6,6 +6,11 @@ import { useRouter } from "next/router";
 import { useCollection } from "../Context/ContextData";
 import MemberScaleton from "../SharedPages/Scaleton/MemberScaleton";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper";
+
 const Team = () => {
 	const { teams, teamLoading } = useCollection();
 
@@ -19,8 +24,9 @@ const Team = () => {
 			</div>
 		);
 	}
+
 	if (!teamLoading && teams?.length === 0) {
-		return <p>No Member Avaiable</p>;
+		return null;
 	}
 
 	return (
@@ -31,7 +37,7 @@ const Team = () => {
 				</h1>
 			</div>
 
-			<div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-10 mt-8 mb-16  max-w-7xl mx-auto">
+			<div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-10 mt-8 mb-16  max-w-7xl mx-auto">
 				{teams
 					?.map((team) => <MemberCard key={team._id} team={team} />)
 					.slice(0, 4)}
