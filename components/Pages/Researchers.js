@@ -60,6 +60,8 @@ const ResearchTeam = () => {
 	return (
 		<div className=" px-5  bg-white text-darkBg pb-10 pt-5">
 			<div className="mb-10  max-w-7xl mx-auto ">
+
+				
 				{leadershipMember?.length !== 0 && (
 					<div className="my-5 lg:my-10">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">

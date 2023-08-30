@@ -10,8 +10,8 @@ const Publications = () => {
 	return (
 		<div>
 			<PageBanner>Our Publications</PageBanner>
-			<Articale />
 			<JournalArticale />
+			<Articale />
 		</div>
 	);
 };
@@ -35,14 +35,14 @@ const Articale = () => {
 	}
 
 	if (!publicationsLoading && findConfArticale?.length === 0) {
-		return null
+		return null;
 	}
 
 	return (
-		<div className="bg-white text-darkBg pt-5 lg:pt-10 pb-2 px-5 lg:px-0 max-w-7xl mx-auto">
-			<h2 className="text-start font-bold text-3xl mb-4">
+		<div className="bg-white text-darkBg  px-5 lg:px-0 max-w-7xl mx-auto">
+			<h2 className="text-start font-bold text-xl lg:text-2xl ">
 				{" "}
-				Conference Article
+				Conference Articles
 			</h2>
 			<div>
 				{findConfArticale?.map((data) => (
@@ -77,35 +77,99 @@ const JournalArticale = () => {
 	const findJourArticale = publications?.filter(
 		(confArt) => confArt.publiCategory === "journal"
 	);
+	const findBooksArticale = publications?.filter(
+		(confArt) => confArt.publiCategory === "book"
+	);
+	const findBooksChapArticale = publications?.filter(
+		(confArt) => confArt.publiCategory === "bookC"
+	);
 
-	if (!publicationsLoading && findJourArticale?.length === 0) {
-		return null
-	}
+	/* if (!publicationsLoading && findJourArticale?.length === 0) {
+		return null;
+	} */
+
 	return (
-		<div className="bg-white text-darkBg pt-3 pb-5 px-5 lg:px-0 max-w-7xl mx-auto">
-			<h2 className="text-start font-bold text-3xl mb-4"> Journal Article</h2>
+		<div className="bg-white text-darkBg  px-5 lg:px-0 max-w-7xl mx-auto mt-5">
 
-			<div>
-				{findJourArticale?.map((data) => (
-					<div key={data?._id} className="py-2 flex items-start gap-3">
-						<div>
-							<BsDot className="text-xl font-bold" />
-						</div>
-						<div>
-							<div
-								className="text-labelclr"
-								dangerouslySetInnerHTML={{ __html: data?.publicationsDesc }}
-							/>
-
-							<Link
-								href={data?.publicationsLink}
-								class="inline-flex items-center font-bold  pb-2 gap-1  text-center text-primary hover:underline text-sm lg:text-base"
-							>
-								Read more <BsArrowRight className="text-xl" />
-							</Link>
-						</div>
+			{findBooksArticale?.length !== 0 && (
+				<div>
+					<h2 className="text-start font-bold text-xl lg:text-2xl">
+						{" "}
+						Books
+					</h2>
+					<div>
+						{findBooksArticale?.map((data) => (
+							<PublicationCard key={data._id} data={data} />
+						))}
 					</div>
-				))}
+				</div>
+			)}
+
+			{findJourArticale?.length !== 0 && (
+				<div>
+					<h2 className="text-start font-bold text-xl lg:text-2xl">
+						{" "}
+						Journal Articles
+					</h2>
+					<div>
+						{findJourArticale?.map((data) => (
+							<PublicationCard key={data._id} data={data} />
+						))}
+					</div>
+				</div>
+			)}
+
+			{findBooksChapArticale?.length !== 0 && (
+				<div>
+					<h2 className="text-start font-bold text-xl lg:text-2xl">
+						{" "}
+						Book Chapters
+					</h2>
+					<div>
+						{findBooksChapArticale?.map((data) => (
+							<PublicationCard key={data._id} data={data} />
+						))}
+					</div>
+				</div>
+			)}
+
+			{/* {findJourArticale?.length !== 0 && (
+				<div>
+					<h2 className="text-start font-bold text-xl lg:text-2xl">
+						{" "}
+						Journal Article
+					</h2>
+					<div>
+						{findJourArticale?.map((data) => (
+							<PublicationCard key={data._id} data={data} />
+						))}
+					</div>
+				</div>
+			)} */}
+
+			
+		</div>
+	);
+};
+
+const PublicationCard = ({ data }) => {
+	return (
+		<div key={data?._id} className="py-2 flex items-start gap-3">
+			<div>
+				<BsDot className="text-xl font-bold" />
+			</div>
+			<div>
+				<div
+					className="text-labelclr"
+					dangerouslySetInnerHTML={{ __html: data?.publicationsDesc }}
+				/>
+
+				<Link
+					href={data?.publicationsLink}
+					class="inline-flex items-center font-bold  pb-2 gap-1  text-center text-primary hover:underline text-sm lg:text-base"
+				>
+					Read more <BsArrowRight className="text-xl" />
+				</Link>
 			</div>
 		</div>
 	);
