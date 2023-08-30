@@ -1,6 +1,11 @@
 import React from "react";
 import PageBanner from "../SharedPages/PageBanner";
-import { BsEnvelope, BsFillTelephoneFill, BsWhatsapp } from "react-icons/bs";
+import {
+	BsEnvelope,
+	BsFillTelephoneFill,
+	BsTelephone,
+	BsWhatsapp,
+} from "react-icons/bs";
 import { BiLocationPlus } from "react-icons/bi";
 import Link from "next/link";
 
@@ -44,14 +49,24 @@ const Contacts = () => {
 								>
 									contact@vrdlab.com
 								</Link>
+
+								<Link
+									href={"mailto:mehedihassan@ieee.org"}
+									className="text-sm lg:text-base"
+								>
+									mehedihassan@ieee.org
+								</Link>
 							</div>
 						</div>
 
 						<div className="bg-creamBg text-darkBg  hover:text-white hover:bg-primary p-5 w-full lg:w-80 h-48   rounded-md border-l-8 border-primary duration-300 ease-linear shadow-lg">
 							<div className="flex flex-col items-center justify-center gap-1">
-								<BsFillTelephoneFill className="text-2xl lg:text-4xl mb-2" />
-								<h2 className="text-base lg:text-lg font-semibold">Call Us</h2>
-								<Link href={"tel:+8801902624501"} className="text-sm lg:text-base">
+								<BsWhatsapp className="text-2xl lg:text-4xl mb-2" />
+								<h2 className="text-base lg:text-lg font-semibold">WhatsApp</h2>
+								<Link
+									href={"tel:+8801902624501"}
+									className="text-sm lg:text-base"
+								>
 									+880 1902 624 501
 								</Link>
 							</div>

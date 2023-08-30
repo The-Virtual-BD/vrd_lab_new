@@ -106,13 +106,13 @@ const News = () => {
 
 					<div className="w-full lg:w-1/4 bg-primary text-white p-5  flex flex-col justify-center rounded-sm h-[250px]">
 						<h2 className="text-xl lg:text-2xl font-bold">
-							Best Laboratory Award Winner Year 2015-2016
+							Best Paper Award Winner Year 2022
 						</h2>
-						<p className="text-lg lg:text-xl py-3">
-							Trustworthy and Loyalty. New technologies. Positive Results.
+						<p className="text-base lg:text-lg py-3">
+							From Human-Centric Intelligent Systems, Springer Journal
 						</p>
 						<Link
-							href="#"
+							href="https://www.springer.com/journal/44230/updates/24020244"
 							class="inline-flex items-center font-bold  text-base py-2 gap-1  "
 						>
 							Read more <BsArrowRight className="text-xl" />

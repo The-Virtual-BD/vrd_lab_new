@@ -10,7 +10,7 @@ import MemberScaleton from "../SharedPages/Scaleton/MemberScaleton";
 const Researchers = () => {
 	return (
 		<div>
-			<PageBanner>Our Research Group Members</PageBanner>
+			<PageBanner>Our Researchers</PageBanner>
 			<ResearchTeam />
 		</div>
 	);
@@ -63,7 +63,7 @@ const ResearchTeam = () => {
 				{leadershipMember?.length !== 0 && (
 					<div className="my-5 lg:my-10">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							Leadership
+							Principal Investigator
 						</h2>
 						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
 							{leadershipMember?.map((team) => (
@@ -76,23 +76,10 @@ const ResearchTeam = () => {
 				{teamMember?.length !== 0 && (
 					<div className="mt-10 lg:mt-20">
 						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							Team Members
+							Researchers
 						</h2>
 						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
 							{teamMember?.map((team) => (
-								<MemberCard key={team.id} team={team} />
-							))}
-						</div>
-					</div>
-				)}
-
-				{alumniMember?.length !== 0 && (
-					<div className="mt-10 lg:mt-20">
-						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
-							Alumni
-						</h2>
-						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
-							{alumniMember?.map((team) => (
 								<MemberCard key={team.id} team={team} />
 							))}
 						</div>
@@ -106,6 +93,19 @@ const ResearchTeam = () => {
 						</h2>
 						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
 							{collabaratorsMember?.map((team) => (
+								<MemberCard key={team.id} team={team} />
+							))}
+						</div>
+					</div>
+				)}
+
+				{alumniMember?.length !== 0 && (
+					<div className="mt-10 lg:mt-20">
+						<h2 className="text-start font-bold text-xl lg:text-3xl mb-2">
+							Alumni
+						</h2>
+						<div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-10 ">
+							{alumniMember?.map((team) => (
 								<MemberCard key={team.id} team={team} />
 							))}
 						</div>

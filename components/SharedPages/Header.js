@@ -16,7 +16,7 @@ const Header = () => {
 				<Navbar.Brand href="/" className="navbar-logo">
 					<img
 						src="/assets/logo.svg"
-						className="mr-3 w-full  h-10 lg:h-16"
+						className="mr-3 w-full  h-10 lg:h-14"
 						alt=" Logo"
 					/>
 
@@ -30,7 +30,7 @@ const Header = () => {
 				<Navbar.Collapse>
 					<Link
 						href="/"
-						className={`text-lg md:text-lg lg:text-xl pl-2 md:pl-0 lg:pl-0  font-semibold nav-menu ${
+						className={`text-base md:text-base lg:text-xl pl-2 md:pl-0 lg:pl-0  font-semibold nav-menu ${
 							location.pathname === "/" ? "active" : ""
 						}`}
 					>
@@ -39,7 +39,7 @@ const Header = () => {
 
 					<Link
 						href="/researchers"
-						className={`text-lg md:text-lg lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
+						className={`text-base md:text-base lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
 							location.pathname === "/researchers" ? "active" : ""
 						}`}
 					>
@@ -48,7 +48,7 @@ const Header = () => {
 
 					<Link
 						href="/projects"
-						className={`text-lg md:text-lg lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
+						className={`text-base md:text-base lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
 							location.pathname === "/projects" ? "active" : ""
 						}`}
 					>
@@ -57,7 +57,7 @@ const Header = () => {
 
 					<Link
 						href="/publications"
-						className={`text-lg md:text-lg lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
+						className={`text-base md:text-base lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
 							location.pathname === "/publications" ? "active" : ""
 						}`}
 					>
@@ -66,7 +66,7 @@ const Header = () => {
 
 					<Link
 						href="/news"
-						className={`text-lg md:text-lg lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
+						className={`text-base md:text-base lg:text-xl pl-2 md:pl-0 lg:pl-0   font-semibold nav-menu ${
 							location.pathname === "/news" ? "active" : ""
 						}`}
 					>
@@ -75,7 +75,7 @@ const Header = () => {
 
 					<Link
 						href="/contacts"
-						className={`text-lg md:text-base lg:text-xl pl-2 md:pl-0 lg:pl-0 pb-2 md:pb-0  font-semibold nav-menu ${
+						className={`text-base md:text-base lg:text-xl pl-2 md:pl-0 lg:pl-0 pb-2 md:pb-0  font-semibold nav-menu ${
 							location.pathname === "/contacts" ? "active" : ""
 						}`}
 					>

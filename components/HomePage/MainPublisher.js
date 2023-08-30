@@ -6,11 +6,14 @@ const MainPublisher = () => {
 	return (
 		<div className="bg-white text-darkBg ">
 			<div className="max-w-7xl mx-auto py-14 px-5 lg:px-0">
-				<h3 className="text-lg lg:text-xl font-bold  pb-10 text-center">
-					Labora is the United States based medical laboratory, medicine, and
-					vaccine company with over{" "}
-					<span className="text-primary">35 years of experience</span> focusing
-					on value medicine and a vaccine to provide quality needs.
+				<h3 className="text-base lg:text-lg font-bold  pb-10 text-center">
+					Our laboratory is a hub of innovation, where the spirit of exploration
+					thrives. Through 
+					<span className="text-primary">  collaborative efforts and a multidisciplinary approach,
+						
+					</span>{" "}
+					we aim to unravel the mysteries of science and technology, paving the
+					way for advancements that will shape the future.
 				</h3>
 
 				<div className="flex flex-col lg:flex-row items-center gap-10">
@@ -21,27 +24,27 @@ const MainPublisher = () => {
 
 					<div className=" w-full lg:w-1/2">
 						<h1 className=" text-2xl lg:text-3xl font-bold mb-3 text-center lg:text-start">
-							WELCOME TO LABORA LABORATORY INC.
+							WELCOME TO VRD Research Lab
 						</h1>
 						<h3 className="text-lg lg:text-xl font-bold my-2 text-center lg:text-start">
-							Having a new name is just the beginning.
+							We do research for innovations.
 						</h3>
 						<p className=" mt-4 mb-3 text-sm lg:text-base">
-							Curabitur metus lorem, mollis sit amet ligula ac, efficitur
-							sagittis justo. Morbi at ligula dictum sem tristique elementum.is
-							ante, in venenatis lacus. Morbi hendrerit, sapien in aliquet
-							venenatis, sem quam volutpa, ut sollicitudin ipsum lorem at lorem.
-							Sed nisi velit, tincidunt sit amet tempus eu, rhoncus eget nisi.
-							Fusce eget facilisis risus. Quisque ac sagittis ante, in venenatis
-							lacus. Morbi hendrerit, sapien in aliquet venenatis, sem quam
-							volutpat massa, ut sollicitudin ipsum lorem at lorem.
+							VRD Research Lab is a pioneering hub that stands at the crossroads
+							of biomedical engineering, data science, and expert systems,
+							forming a vibrant nexus where innovative ideas converge and
+							cutting-edge research unfolds. What sets VRD Research Lab apart is
+							its holistic approach, encompassing wearable devices, electronic
+							health records, and the Internet of Things (IoT), all harnessed to
+							devise comprehensive healthcare solutions that prioritize both
+							efficiency and confidentiality.
 						</p>
 
 						<Link
-							href="/publications"
+							href="/contacts"
 							class="inline-flex items-center text-base lg:text-xl font-bold py-2 gap-1 text-primary hover:text-secondary "
 						>
-							View Our Publications
+							Let&apos;s Talk
 							<BsArrowRight className="text-xl" />
 						</Link>
 					</div>

@@ -1,7 +1,8 @@
 import { Footer } from "flowbite-react";
 import Link from "next/link";
 import React from "react";
-import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+import { BsFacebook, BsTwitter } from "react-icons/bs";
+import { SiGooglescholar } from "react-icons/si";
 
 const FooterD = () => {
 	const getYear = new Date().getFullYear();
@@ -10,17 +11,16 @@ const FooterD = () => {
 			<footer>
 				<div className="w-full ">
 					<div className="bg-creamBg">
-						<div className="flex flex-col lg:flex-row items-center gap-10 px-5 lg:px-0 py-5 max-w-7xl mx-auto">
+						<div className="flex flex-col lg:flex-row items-center justify-between gap-10 px-5 lg:px-0 py-5 max-w-7xl mx-auto">
 							<div className="w-full lg:w-2/6 ">
 								<div className="">
 									<img
 										src="/assets/logo.svg"
-										className=" w-full h-16"
+										className=" h-16"
 										alt=" Logo"
 									/>
-									<p className=" text-sm lg:text-base  mt-4">
-										Labora is a creative & powerful medical and laboratory site
-										template that suits all your business needs.
+									<p className=" text-sm lg:text-base text-start  mt-4">
+										We do research for innovations.
 									</p>
 								</div>
 							</div>
@@ -65,23 +65,23 @@ const FooterD = () => {
 									<div>
 										<Footer.Title title="Follow Us" />
 										<Footer.LinkGroup row className="gap-3">
-											<Footer.Link href="#">
+											<Footer.Link href="https://www.facebook.com/vrdlab">
 												<div className="h-9 w-9 bg-primary hover:bg-secondary cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
 													<BsFacebook />
 												</div>
 											</Footer.Link>
 
-											<Footer.Link href="#">
+											<Footer.Link href="https://scholar.google.com/citations?user=Ts2F72QAAAAJ&hl=en">
 												<div className="h-9 w-9 bg-primary hover:bg-secondary cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
-													<BsInstagram />
+													<SiGooglescholar />
 												</div>
 											</Footer.Link>
 
-											<Footer.Link href="#">
+											{/* <Footer.Link href="#">
 												<div className="h-9 w-9 bg-primary hover:bg-secondary cursor-pointer text-white  rounded-full flex items-center justify-center text-lg">
 													<BsTwitter />
 												</div>
-											</Footer.Link>
+											</Footer.Link> */}
 										</Footer.LinkGroup>
 									</div>
 								</div>

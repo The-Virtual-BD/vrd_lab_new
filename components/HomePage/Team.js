@@ -33,7 +33,7 @@ const Team = () => {
 		<div className="text-darkBg bg-white  py-10 px-5 ">
 			<div className="max-w-7xl mx-auto">
 				<h1 className="text-2xl lg:text-4xl font-semibold text-start mb-10">
-					Our Research Group Members
+					Our Researchers
 				</h1>
 			</div>
 
