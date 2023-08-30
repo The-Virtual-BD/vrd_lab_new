@@ -119,6 +119,15 @@ const News = () => {
 						</Link>
 					</div>
 				</div>
+
+				<div className=" flex items-center justify-center mt-10">
+					<Link
+						href={"/news"}
+						className=" bg-primary hover:bg-secondary text-sm lg:text-xl text-white  py-2 px-5 lg:px-8 rounded  flex items-center gap-1 text-center"
+					>
+						<span>VIEW ALL</span> <BsArrowRight />
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
