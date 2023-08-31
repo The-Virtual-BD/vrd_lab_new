@@ -21,7 +21,7 @@ const RecentProjects = () => {
 	}
 
 	if (!projectsLoading && projects?.length === 0) {
-		return <p>No Past Projects Avaiable</p>;
+		return null
 	}
 
 	const sorProject = [...projects]?.reverse();

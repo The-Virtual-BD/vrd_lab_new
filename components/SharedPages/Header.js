@@ -11,12 +11,12 @@ const Header = () => {
 		<div className="">
 			<Navbar
 				rounded={true}
-				className="fixed w-full top-0  shadow-lg py-1 z-50 navbar-menu "
+				className="fixed w-full top-0  shadow-lg py-1 z-50 navbar-menu  "
 			>
 				<Navbar.Brand href="/" className="navbar-logo">
 					<img
 						src="/assets/logo.svg"
-						className="mr-3 w-full  h-10 lg:h-14"
+						className="mr-3 w-full  h-10 lg:h-12"
 						alt=" Logo"
 					/>
 

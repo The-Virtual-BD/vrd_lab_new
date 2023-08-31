@@ -7,7 +7,7 @@ const LeadingCompany = () => {
 		<div className="bg-creamBg text-darkBg">
 			<div className="flex flex-col lg:flex-row items-center gap-10 py-10">
 				<img
-					src="/assets/cover-2.png"
+					src="/assets/collab.jpg"
 					alt="hear-cover"
 					className=" w-full lg:w-1/2 rounded-r-md"
 				/>

@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 const MainPublisher = () => {
 	return (
 		<div className="bg-white text-darkBg ">
-			<div className="max-w-7xl mx-auto py-14 px-5 lg:px-0">
+			<div className="max-w-7xl mx-auto py-8 px-5 lg:px-0">
 				<h3 className="text-base lg:text-lg font-bold  pb-10 text-center">
 					Our laboratory is a hub of innovation, where the spirit of exploration
 					thrives. Through 
@@ -16,7 +16,7 @@ const MainPublisher = () => {
 					way for advancements that will shape the future.
 				</h3>
 
-				<div className="flex flex-col lg:flex-row items-center gap-10">
+				<div className="flex flex-col lg:flex-row items-center gap-8">
 					<img
 						src="/assets/photo1.jpg"
 						className="h-full w-full lg:w-1/2 rounded-md"

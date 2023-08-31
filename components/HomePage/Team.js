@@ -9,14 +9,15 @@ import MemberScaleton from "../SharedPages/Scaleton/MemberScaleton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+import "swiper/css/navigation";
+import { Pagination, Autoplay,Navigation } from "swiper";
 
 const Team = () => {
 	const { teams, teamLoading } = useCollection();
 
 	if (teamLoading) {
 		return (
-			<div className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
+			<div className="grid grid-cols-1 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
 				<MemberScaleton />
 				<MemberScaleton />
 				<MemberScaleton />
@@ -32,15 +33,56 @@ const Team = () => {
 	return (
 		<div className="text-darkBg bg-white  py-10 px-5 ">
 			<div className="max-w-7xl mx-auto">
-				<h1 className="text-2xl lg:text-4xl font-semibold text-start mb-10">
+				<h1 className="text-2xl lg:text-4xl font-semibold text-start mb-6">
 					Our Researchers
 				</h1>
 			</div>
 
-			<div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-10 mt-8 mb-16  max-w-7xl mx-auto">
-				{teams
-					?.map((team) => <MemberCard key={team._id} team={team} />)
-					.slice(0, 4)}
+
+			<div className="max-w-7xl mx-auto px-5 lg:px-0   ">
+				<Swiper
+					slidesPerView={3}
+					slidesPerGroup={1}
+					loop={true}
+					grabCursor={true}
+					autoplay={{
+						delay: 2000,
+						disableOnInteraction: true,
+					}}
+					navigation={true}
+					Pagination={true}
+					breakpoints={{
+						210: {
+							slidesPerView: 1,
+						},
+						299: {
+							slidesPerView: 1,
+							spaceBetween: 10,
+						},
+
+						640: {
+							slidesPerView: 2,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 3,
+							spaceBetween: 20,
+						},
+						1024: {
+							slidesPerView: 4,
+							spaceBetween: 30,
+						},
+					}}
+					modules={[Autoplay, Navigation, Pagination]}
+					className="mySwiper  mb-10 mt-6 "
+				>
+					{teams?.map((team) => (
+						<SwiperSlide key={team._id}>
+							{" "}
+							<MemberCard team={team} />
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</div>
 
 			<div className=" flex items-center justify-center">
@@ -61,13 +103,13 @@ const MemberCard = ({ team }) => {
 	const { _id, memberName, memberImg, memberDesi } = team;
 
 	return (
-		<div>
-			<div className="team_card ">
-				<div className="team_img">
-					<img src={`${baseUrl}/${memberImg}`} alt={memberName} />
+		<div className="mb-10 w-full">
+			<div className="team_card  ">
+				<div className="team_img team_img_slider">
+					<img src={`${baseUrl}/${memberImg}`} alt={memberName} className="" />
 				</div>
 
-				<div className="team_info">
+				<div className="team_info shadow-lg ">
 					<h2 className="font-semibold">{memberName}</h2>
 					<p className="text-sm lg:text-base">{memberDesi}</p>
 				</div>
